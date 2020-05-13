@@ -261,7 +261,7 @@ def cagr(returns, rf=0., compounded=True):
     else:
         total = _np.sum(total)
 
-    years = (returns.index[-1] - returns.index[0]).days / 365.
+    years = (returns.index[-1] - returns.index[0]).days / 365
 
     res = abs(total + 1.0) ** (1.0 / years) - 1
 
@@ -601,7 +601,7 @@ def information_ratio(returns, benchmark):
     return diff_rets.mean() / diff_rets.std()
 
 
-def greeks(returns, benchmark, periods=365.):
+def greeks(returns, benchmark, periods=365):
     """ calculates alpha and beta of the portfolio """
 
     # ----------------------------
